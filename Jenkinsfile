@@ -5,6 +5,7 @@ node {
         sh "chmod 755 ./gradlew"
         sh "./gradlew customFatJar"
         sh "cd build/libs"
+        sh "cp build/libs/*.jar ."
         sh "ls"
     }
 }

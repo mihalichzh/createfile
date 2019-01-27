@@ -16,13 +16,13 @@ node {
     stage('Prepare test environment') {
         sh "mkdir testnamespace"
         sh "cp test.txt testnamespace"
-        dir('testnamespace') {
-            sh "ls"
-        }
     }
 
     stage('Run tests') {
-        build(job: 'tests-job/master')
+        dir('testnamespace') {
+            sh "ls"
+            build(job: 'tests-job/master')
+        }
     }
 
 }

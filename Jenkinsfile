@@ -10,4 +10,11 @@ node {
         sh " java -jar executable*"
         sh "ls"
     }
+    stage('Prepare test environment') {
+        sh "mkdir testnamespace"
+        sh "cp test.txt testnamespace"
+        dir('testnamespace') {
+            sh "ls"
+        }
+    }
 }

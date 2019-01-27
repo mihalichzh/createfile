@@ -1,4 +1,5 @@
 node {
+    cleanWs()
     checkout scm
 
     stage('Build Jar') {

@@ -7,5 +7,7 @@ node {
         sh "cd build/libs"
         sh "cp build/libs/*.jar ."
         sh "ls"
+        sh " java -jar executable*"
+        sh "ls"
     }
 }

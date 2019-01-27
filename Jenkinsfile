@@ -8,6 +8,6 @@ node {
         sh "cp build/libs/*.jar ."
         sh "ls"
         sh " java -jar executable*"
-        sh "ls"
+        sh "ls /var/jenkins_home/workspace"
     }
 }
